@@ -59,7 +59,7 @@ def triangles():
 # [1, 6, 15, 20, 15, 6, 1]
 # [1, 7, 21, 35, 35, 21, 7, 1]
 # [1, 8, 28, 56, 70, 56, 28, 8, 1]
-# [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+# [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]                                                                                                                                                     
 n = 0
 results = []
 for t in triangles():
@@ -94,7 +94,7 @@ def fn(x, y):
     return x * 10 + y
 print('13579:',reduce(fn, [1, 3, 5, 7, 9]))
 
-
+#类就是封装；对方法设置访问限制也是封装
 class Student(object):
     def __init__(self, name, score):
         self.name = name
@@ -112,3 +112,22 @@ lisa = Student('Lisa', 99)
 bart = Student('Bart', 59)
 print(lisa.name, lisa.get_grade())
 print(bart.name, bart.get_grade())
+#继承和多态的展示
+class Animal(object):
+    def run(self):
+        print('Animal is running...')
+
+class Dog(Animal):
+    def run(self):
+        print('Dog is running...')
+
+
+class Cat(Animal):
+    def run(self):
+        print('Cat is running...')
+
+dog = Dog()
+dog.run()
+
+cat = Cat()
+cat.run()
